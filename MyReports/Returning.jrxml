@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.1.final using JasperReports Library version 6.0.0  -->
+<!-- 2014-12-28T22:31:56 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Returning" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d1c02e7f-beb9-4ff2-b011-10ad3d5e292c">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (4)"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<queryString>
+		<![CDATA[select * from  lms.returning]]>
+	</queryString>
+	<field name="returnid" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="returndate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="issueid" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="finepaid" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="UPC" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="studentid" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="returnid">
+		<groupExpression><![CDATA[$F{returnid}]]></groupExpression>
+	</group>
+	<group name="returndate">
+		<groupExpression><![CDATA[$F{returndate}]]></groupExpression>
+	</group>
+	<group name="issueid">
+		<groupExpression><![CDATA[$F{issueid}]]></groupExpression>
+	</group>
+	<group name="finepaid">
+		<groupExpression><![CDATA[$F{finepaid}]]></groupExpression>
+	</group>
+	<group name="UPC">
+		<groupExpression><![CDATA[$F{UPC}]]></groupExpression>
+	</group>
+	<group name="studentid">
+		<groupExpression><![CDATA[$F{studentid}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<textField>
+				<reportElement x="270" y="20" width="380" height="30" uuid="cd01d3dd-c43b-440b-92e5-4457a528585d"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Library Management System"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="70" width="380" height="30" uuid="66691796-71ae-487a-ac52-9f0e9d49c5f9"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Returning Report"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="137" height="30" uuid="5d523278-860b-419a-acd7-e18acc1d8b78"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Return ID
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="137" y="0" width="133" height="30" uuid="1d16f054-25e3-4ead-8fb5-2d44624bb8fa"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Return Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="0" width="133" height="30" uuid="fa027779-2fc3-4997-8c6b-5ab51d969682"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Issue ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="403" y="0" width="133" height="30" uuid="e3862431-c0d7-4bc5-9172-922f5545fd0f"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Fine Paid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="536" y="0" width="133" height="30" uuid="7b85da83-4990-4bd4-8643-325c45ca297a"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[UPC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="669" y="0" width="133" height="30" uuid="170e2213-f987-47de-9990-c46eb5799548"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Student ID
+]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="67" width="137" height="30" uuid="b53e398c-8d32-4f38-912c-6b0fe9b874dc"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{returnid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="137" y="67" width="133" height="30" uuid="59d61ad7-6e0a-459a-979f-3674f5a74083"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{returndate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="67" width="133" height="30" uuid="3ebbba99-7000-4424-9fe7-dc1660c0e20c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{issueid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="403" y="67" width="133" height="30" uuid="2254c6e7-7e7f-4fc1-a577-57eebac984e6"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{finepaid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="536" y="67" width="133" height="30" uuid="5dfd8fc4-40c6-422e-8d12-bbf46fdc61f9"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{UPC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="669" y="67" width="133" height="30" uuid="eb8ddc60-12db-40b1-a9e3-4b32a9624354"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{studentid}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

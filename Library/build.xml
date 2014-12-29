@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="lms">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../eclipse/"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.7"/>
+    <property name="source" value="1.7"/>
+    <path id="lms.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="../DatePicker-V0.99-2006.09.01.jar"/>
+        <pathelement location="../../../../../Others/Semester 5/OOAD LAB/Lab7/mysql-connector-java-5.1.32-bin.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="lms.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="Authentication">
+        <java classname="gui.Authentication.Authentication" failonerror="true" fork="yes">
+            <classpath refid="lms.classpath"/>
+        </java>
+    </target>
+    <target name="bookPurchase">
+        <java classname="gui.Purchase.bookPurchase" failonerror="true" fork="yes">
+            <classpath refid="lms.classpath"/>
+        </java>
+    </target>
+    <target name="BookPurchaseMain">
+        <java classname="gui.Purchase.BookPurchaseMain" failonerror="true" fork="yes">
+            <classpath refid="lms.classpath"/>
+        </java>
+    </target>
+    <target name="budgetinsertion">
+        <java classname="gui.Budget.budgetinsertion" failonerror="true" fork="yes">
+            <classpath refid="lms.classpath"/>
+        </java>
+    </target>
+    <target name="budgetjtable">
+        <java classname="gui.Budget.budgetjtable" failonerror="true" fork="yes">
+            <classpath refid="lms.classpath"/>
+        </java>
+    </target>
+    <target name="budgetmain">
+        <java classname="gui.Budget.budgetmain" failonerror="true" fork="yes">
+            <classpath refid="lms.classpath"/>
+        </java>
+    </target>
+    <target name="budgetupdate2">
+        <java classname="gui.Budget.budgetupdate2" failonerror="true" fork="yes">
+            <classpath refid="lms.classpath"/>
+        </java>
+    </target>
+    <target name="insert_msg">
+        <java classname="gui.Budget.insert_msg" failonerror="true" fork="yes">
+            <classpath refid="lms.classpath"/>
+        </java>
+    </target>
+    <target name="issuanceinsert">
+        <java classname="gui.issuance.issuanceinsert" failonerror="true" fork="yes">
+            <classpath refid="lms.classpath"/>
+        </java>
+    </target>
+    <target name="librarianmainpage">
+        <java classname="gui.Authentication.librarianmainpage" failonerror="true" fork="yes">
+            <classpath refid="lms.classpath"/>
+        </java>
+    </target>
+    <target name="logininsertion">
+        <java classname="gui.Authentication.logininsertion" failonerror="true" fork="yes">
+            <classpath refid="lms.classpath"/>
+        </java>
+    </target>
+    <target name="loginjtable">
+        <java classname="gui.Authentication.loginjtable" failonerror="true" fork="yes">
+            <classpath refid="lms.classpath"/>
+        </java>
+    </target>
+    <target name="loginmain">
+        <java classname="gui.Authentication.loginmain" failonerror="true" fork="yes">
+            <classpath refid="lms.classpath"/>
+        </java>
+    </target>
+    <target name="MainPage">
+        <java classname="gui.Authentication.MainPage" failonerror="true" fork="yes">
+            <classpath refid="lms.classpath"/>
+        </java>
+    </target>
+    <target name="ms">
+        <java classname="gui.ms" failonerror="true" fork="yes">
+            <classpath refid="lms.classpath"/>
+        </java>
+    </target>
+    <target name="purchasereport">
+        <java classname="gui.Purchase.purchasereport" failonerror="true" fork="yes">
+            <classpath refid="lms.classpath"/>
+        </java>
+    </target>
+    <target name="reservationjtable">
+        <java classname="gui.reservation.reservationjtable" failonerror="true" fork="yes">
+            <classpath refid="lms.classpath"/>
+        </java>
+    </target>
+    <target name="reservation_gui">
+        <java classname="gui.reservation.reservation_gui" failonerror="true" fork="yes">
+            <classpath refid="lms.classpath"/>
+        </java>
+    </target>
+    <target name="returninsert">
+        <java classname="gui.returning.returninsert" failonerror="true" fork="yes">
+            <classpath refid="lms.classpath"/>
+        </java>
+    </target>
+    <target name="slider">
+        <java classname="gui.Authentication.slider" failonerror="true" fork="yes">
+            <classpath refid="lms.classpath"/>
+        </java>
+    </target>
+    <target name="SoundMeter">
+        <java classname="gui.SoundMeter" failonerror="true" fork="yes">
+            <classpath refid="lms.classpath"/>
+        </java>
+    </target>
+    <target name="st_database_GUI">
+        <java classname="gui.UserReport.st_database_GUI" failonerror="true" fork="yes">
+            <classpath refid="lms.classpath"/>
+        </java>
+    </target>
+    <target name="test">
+        <java classname="gui.test" failonerror="true" fork="yes">
+            <classpath refid="lms.classpath"/>
+        </java>
+    </target>
+    <target name="timeout">
+        <java classname="gui.timeout" failonerror="true" fork="yes">
+            <classpath refid="lms.classpath"/>
+        </java>
+    </target>
+    <target name="userreportjtable">
+        <java classname="gui.UserReport.userreportjtable" failonerror="true" fork="yes">
+            <classpath refid="lms.classpath"/>
+        </java>
+    </target>
+</project>

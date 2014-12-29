@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.1.final using JasperReports Library version 6.0.0  -->
+<!-- 2014-12-28T23:39:56 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Budget" pageWidth="842" pageHeight="595" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ad99617a-968c-4f69-a093-99229935755b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (4)"/>
+	<queryString>
+		<![CDATA[select * from  lms.budget]]>
+	</queryString>
+	<field name="ID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Year" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Issue_Date" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Aspected_Amount" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Requested_Amount" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Issued_Amount" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Semester_Type" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CS" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EE" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="BBA" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="HR" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FurnitureEquipment" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Bill" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="ID">
+		<groupExpression><![CDATA[$F{ID}]]></groupExpression>
+	</group>
+	<group name="Year">
+		<groupExpression><![CDATA[$F{Year}]]></groupExpression>
+	</group>
+	<group name="Issue_Date">
+		<groupExpression><![CDATA[$F{Issue_Date}]]></groupExpression>
+	</group>
+	<group name="Aspected_Amount">
+		<groupExpression><![CDATA[$F{Aspected_Amount}]]></groupExpression>
+	</group>
+	<group name="Requested_Amount">
+		<groupExpression><![CDATA[$F{Requested_Amount}]]></groupExpression>
+	</group>
+	<group name="Issued_Amount">
+		<groupExpression><![CDATA[$F{Issued_Amount}]]></groupExpression>
+	</group>
+	<group name="Semester_Type">
+		<groupExpression><![CDATA[$F{Semester_Type}]]></groupExpression>
+	</group>
+	<group name="CS">
+		<groupExpression><![CDATA[$F{CS}]]></groupExpression>
+	</group>
+	<group name="EE">
+		<groupExpression><![CDATA[$F{EE}]]></groupExpression>
+	</group>
+	<group name="BBA">
+		<groupExpression><![CDATA[$F{BBA}]]></groupExpression>
+	</group>
+	<group name="HR">
+		<groupExpression><![CDATA[$F{HR}]]></groupExpression>
+	</group>
+	<group name="FurnitureEquipment">
+		<groupExpression><![CDATA[$F{FurnitureEquipment}]]></groupExpression>
+	</group>
+	<group name="Bill">
+		<groupExpression><![CDATA[$F{Bill}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<textField>
+				<reportElement x="280" y="30" width="380" height="30" uuid="cba9e658-97ea-4dbe-9d20-cec5a896055f"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Library Management System"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="70" width="380" height="30" uuid="c3d277ab-e8c1-4232-acb7-1cf0aab06b77"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Budget Report"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="50" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="70" height="30" uuid="71cda05d-2bfb-4989-8a75-3ad4b1cc8a55"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="0" width="61" height="30" uuid="48c97ec0-1f4f-4b65-835f-66726452b4c5"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Year]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="131" y="0" width="61" height="30" uuid="0b922c46-2979-427f-b403-345f0631b935"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Issue Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="192" y="0" width="61" height="30" uuid="c99c37c0-da81-4844-8c6f-d5597f3612fa"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Aspected Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="253" y="0" width="61" height="30" uuid="ab4a3ba6-f6cf-4e27-b02c-1dab409019cb"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Req Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="314" y="0" width="61" height="30" uuid="731941d4-1946-4422-a70a-295aba719b06"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Issued Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="0" width="61" height="30" uuid="7faefc0d-9b79-4243-a8d6-0e655e59a4d2"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Sem Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="436" y="0" width="61" height="30" uuid="bdb4ffb3-ec8b-4f02-99a2-cdbe620e7602"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[CS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="497" y="0" width="61" height="30" uuid="49e802d6-b928-436e-b039-720d3e0226ea"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[EE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="558" y="0" width="61" height="30" uuid="ae92a1cb-d90b-4cef-9984-607cd972148c"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[BBA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="619" y="0" width="61" height="30" uuid="35b5676e-c7b5-42ad-9b74-e380111cda1c"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[HR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="680" y="0" width="61" height="30" uuid="76129fbc-0d10-4054-b1a2-1e78cd16bb30"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Furniture]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="741" y="0" width="61" height="30" uuid="a718ddfd-371f-455c-9a4f-b3af5c792647"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Bill]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="36" width="70" height="30" uuid="7294e046-99bb-4a02-bf74-75d0bcdba3ba"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="36" width="61" height="30" uuid="ef0e8e3d-a000-49a6-ba6b-3f31323943d5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Year}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="131" y="36" width="61" height="30" uuid="27a52e66-4c59-4b18-a92a-627edfd2afe2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Issue_Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="192" y="36" width="61" height="30" uuid="34cdb4e7-9822-42bc-8091-76eecb3cd7eb"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Aspected_Amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="253" y="36" width="61" height="30" uuid="f11796a7-663d-4f4c-9277-afb8dc474132"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Requested_Amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="314" y="36" width="61" height="30" uuid="9f4aa9f2-da0e-4145-a2f0-8dc52dd50603"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Issued_Amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="375" y="36" width="61" height="30" uuid="78dc58ad-256f-4be7-8052-989221ef19da"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Semester_Type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="436" y="36" width="61" height="30" uuid="83f9c330-44d8-4564-ab40-118485fff7bf"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="497" y="36" width="61" height="30" uuid="7178c783-3286-42fc-91c7-47905177af28"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{EE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="558" y="36" width="61" height="30" uuid="fc56567a-af50-437a-a489-09cc39c98f01"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{BBA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="619" y="36" width="61" height="30" uuid="91578535-beb9-4aae-a52d-b6a6d41f10d5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{HR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="680" y="36" width="61" height="30" uuid="c9681a41-5dfd-4b73-a459-5ecfb7cd22d7"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{FurnitureEquipment}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="741" y="36" width="61" height="30" uuid="0664f904-b384-41f4-abcd-1ad31925c45d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Bill}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

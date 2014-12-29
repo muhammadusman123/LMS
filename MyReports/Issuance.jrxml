@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.1.final using JasperReports Library version 6.0.0  -->
+<!-- 2014-12-29T00:26:23 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Issuance" pageWidth="842" pageHeight="595" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d4cd7308-30cb-460c-a2cb-a2e3ee97e62c">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (4)"/>
+	<queryString>
+		<![CDATA[select * from  lms.issuance]]>
+	</queryString>
+	<field name="issuanceid" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="studentid" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="issuedate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="returndate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="UPC" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="issuanceid">
+		<groupExpression><![CDATA[$F{issuanceid}]]></groupExpression>
+	</group>
+	<group name="studentid">
+		<groupExpression><![CDATA[$F{studentid}]]></groupExpression>
+	</group>
+	<group name="issuedate">
+		<groupExpression><![CDATA[$F{issuedate}]]></groupExpression>
+	</group>
+	<group name="returndate">
+		<groupExpression><![CDATA[$F{returndate}]]></groupExpression>
+	</group>
+	<group name="UPC">
+		<groupExpression><![CDATA[$F{UPC}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<textField>
+				<reportElement x="270" y="10" width="380" height="30" uuid="4558def6-1cd5-4da9-b4f2-afb1a6177175"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Library Management System"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="60" width="380" height="30" uuid="b3abc9bd-e0a4-4fec-9723-687a73610497"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Issuance Report"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="162" height="30" uuid="ef4f03b6-0f61-4dc7-babc-358d84b878be"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Issuance ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="162" y="0" width="160" height="30" uuid="3324b7b8-ec94-49b8-8cc2-109dc002f5fe"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Student ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="322" y="0" width="160" height="30" uuid="15bd6847-a4de-44b0-a6d2-07843deefa35"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Issue Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="482" y="0" width="160" height="30" uuid="a5aabb73-68f9-4ec1-a87b-a090d16f890d"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Return Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="642" y="0" width="160" height="30" uuid="275c6caa-e9b6-4fe5-b31a-01ce4052e022"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[UPC]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="26" width="162" height="30" uuid="4159dd27-30e6-4e2e-ad1b-c11423c97a64"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{issuanceid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="162" y="26" width="160" height="30" uuid="e803b245-03c7-4837-bb36-f1f6b2a348f1"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{studentid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="322" y="26" width="160" height="30" uuid="8ff457a0-76ce-48ce-8ed0-9203d5f293e6"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{issuedate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="482" y="26" width="160" height="30" uuid="b0214b35-d48c-4116-9f43-2a4666fad45a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{returndate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="642" y="26" width="160" height="30" uuid="372b822e-4509-4ac2-8106-f0623d349e04"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{UPC}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="741" y="16" width="100" height="30" uuid="b37a7013-fea4-46a5-a720-21d8005f964e"/>
+				<text><![CDATA[Static Text]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

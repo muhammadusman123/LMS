@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.1.final using JasperReports Library version 6.0.0  -->
+<!-- 2014-12-28T21:41:21 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Reservation" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="189fde02-24b1-4d55-bb21-1500a2b31a69">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (4)"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString>
+		<![CDATA[select * from  lms.reservation]]>
+	</queryString>
+	<field name="reservationid" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Book_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Book_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Reservation_Date" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Student_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="reservationid">
+		<groupExpression><![CDATA[$F{reservationid}]]></groupExpression>
+	</group>
+	<group name="Book_name">
+		<groupExpression><![CDATA[$F{Book_name}]]></groupExpression>
+	</group>
+	<group name="Book_id">
+		<groupExpression><![CDATA[$F{Book_id}]]></groupExpression>
+	</group>
+	<group name="Reservation_Date">
+		<groupExpression><![CDATA[$F{Reservation_Date}]]></groupExpression>
+	</group>
+	<group name="Student_id">
+		<groupExpression><![CDATA[$F{Student_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="99" splitType="Stretch">
+			<textField>
+				<reportElement x="280" y="20" width="380" height="30" uuid="ce09dcc5-9a34-489d-9473-91299b6d28fd"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Library Management System"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="60" width="380" height="30" uuid="1b4fb04d-9ee2-4a62-a193-fcf355042fc5"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Reservation Report"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="162" height="30" uuid="a4cd6db4-a87c-401c-8621-7ca8817adf4d"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Reservation ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="162" y="0" width="160" height="30" uuid="9d0294f9-191f-41d0-84e0-ca0e10f5b401"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Book Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="322" y="0" width="160" height="30" uuid="3d564811-91b6-4802-af31-af23e1aead65"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Book ID
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="482" y="0" width="160" height="30" uuid="f05d35c7-4042-46fc-bf3b-f4c4d5a21201"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Reservation Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="642" y="0" width="160" height="30" uuid="92c36ca2-85f4-4e9f-a16d-723dceefbc3d"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Student ID]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="26" width="162" height="30" uuid="5d7acf21-3dcb-4486-ba85-8cde69a4d977"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{reservationid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="162" y="26" width="160" height="30" uuid="a1951dc3-e390-42e1-9d71-3833290b4d0d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Book_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="322" y="26" width="160" height="30" uuid="1f6bc15e-51ce-4a09-8896-d33c17745503"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Book_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="482" y="26" width="160" height="30" uuid="88f8e7a8-3f49-4842-98d7-c3b3765fe9c7"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Reservation_Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="642" y="26" width="160" height="30" uuid="cb8af024-deca-4f70-a467-39718fb98658"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Student_id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
